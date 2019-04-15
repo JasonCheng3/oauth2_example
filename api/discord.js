@@ -9,7 +9,7 @@ const router = express.Router();
 // const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const CLIENT_ID = '567230594359099392';
 const CLIENT_SECRET = 'xfvPCj0SEowEc83mLo0vFGdSz19nZD45';
-const redirect = encodeURIComponent('http://localhost/api/discord/callback');
+const redirect = encodeURIComponent('http://localhost:50451/api/discord/callback');
 
 
 router.get('/login', (req, res)=> {
@@ -32,6 +32,6 @@ router.get('/callback', catchAsync(async (req, res) => {
   }));
 
 // Routes
-app.use('/api/discord', require('./api/discord'));
+
 
 module.exports = router;
